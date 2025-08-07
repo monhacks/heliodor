@@ -118,7 +118,7 @@ MID_BUILDDIR = $(OBJ_DIR)/$(MID_SUBDIR)
 SHELL := bash -o pipefail
 
 GIT_URL := $(shell git remote get-url origin)
-BUILD_REPO_BRANCH := \"$(GIT_URL:https://github.com/%=%)/$(shell git branch --show-current)\"
+BUILD_REPO_BRANCH := \"$(GIT_URL:https://github.com/monhacks)/$(shell git branch --show-current)\"
 BUILD_VERSION := \"$(shell git describe --tags --abbrev=7)\"
 BUILD_TIME := \"$(shell date -u +%Y.%m.%d-%H:%M)\"
 BUILD_DIRTY := $(shell if [ -n "$$(git status --porcelain)" ]; then \
